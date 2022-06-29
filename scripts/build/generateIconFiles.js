@@ -15,7 +15,7 @@ export default function({ iconNodes, outputDirectory, template, showLog = true, 
 
   const writeIconFiles = icons.map(async iconName => {
     const location = path.join(iconsDistDirectory, `${iconName}${iconFileExtention}`);
-    const componentName = toPascalCase(iconName);
+    const componentName = `Lu${toPascalCase(iconName)}`;
 
     let { children } = iconNodes[iconName];
     children = children.map(({name, attributes}) => ([name, attributes]))

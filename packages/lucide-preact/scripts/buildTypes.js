@@ -34,7 +34,7 @@ const svgFiles = readSvgDirectory(ICONS_DIR);
 
 svgFiles.forEach(svgFile => {
   const iconName = path.basename(svgFile, '.svg');
-  const componentName = toPascalCase(iconName);
+  const componentName = `Lu${toPascalCase(iconName)}`;
 
   const exportTypeString = `export declare const ${componentName}: (props: LucideProps) => JSX.Element;\n`;
   appendFile(exportTypeString, TYPES_FILE, srcDirectory);

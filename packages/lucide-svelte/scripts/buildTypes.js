@@ -41,7 +41,7 @@ const svgFiles = readSvgDirectory(ICONS_DIR);
 
 svgFiles.forEach(svgFile => {
   const iconName = path.basename(svgFile, '.svg');
-  const componentName = toPascalCase(iconName);
+  const componentName = `Lu${toPascalCase(iconName)}`;
 
   const exportTypeString = `export declare class ${componentName} extends SvelteComponentTyped<IconProps, IconEvents, {}> {}\n`;
   appendFile(exportTypeString, TYPES_FILE, srcDirectory);

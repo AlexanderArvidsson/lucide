@@ -26,7 +26,7 @@ const svgFiles = readSvgDirectory(ICONS_DIR);
 
 svgFiles.forEach(svgFile => {
   const nameSvg = path.basename(svgFile, '.svg');
-  const componentName = toPascalCase(nameSvg);
+  const componentName = `Lu${toPascalCase(nameSvg)}`;
 
   appendFile(
     `export declare const ${componentName}: (props: SVGProps) => FunctionalComponent<SVGProps>;\n`,

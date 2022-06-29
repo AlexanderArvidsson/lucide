@@ -34,7 +34,7 @@ export class LucideAngularComponent implements OnChanges {
     if (changes.name) {
       // icons are provided as an array of objects because of "multi: true"
       const icons = Object.assign({}, ...(this.icons as any as object[]));
-      const icoOfName = icons[this.toPascalCase(changes.name.currentValue)] || '';
+      const icoOfName = icons[`Lu${this.toPascalCase(changes.name.currentValue)}`] || '';
 
       if (!icoOfName) {
         console.warn(

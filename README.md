@@ -1,5 +1,11 @@
 <p align=center><img width="410" src="https://lucide.dev/logo-text.svg" alt="Lucide Logo"></p>
 
+
+# Why fork?
+This fork changes the default icon size from 24px to 1em, which means it should follow the text font size correctly.
+
+It also changes the exports to prefix with Lu (for example LuFolder), to be more compatible with react-icons.
+
 # Lucide
 
 ![NPM](https://img.shields.io/npm/l/lucide)

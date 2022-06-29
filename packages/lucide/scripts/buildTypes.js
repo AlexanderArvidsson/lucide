@@ -60,7 +60,7 @@ const svgFiles = readSvgDirectory(ICONS_DIR);
 
 svgFiles.forEach(svgFile => {
   const nameSvg = path.basename(svgFile, '.svg');
-  const namePascal = toPascalCase(nameSvg);
+  const namePascal = `Lu${toPascalCase(nameSvg)}`;
 
   appendFile(`export declare const ${namePascal}: IconNode;\n`, TYPES_FILE_NAME, TARGET_DIR);
 });

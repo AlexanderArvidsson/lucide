@@ -54,7 +54,7 @@ const toPascalCase = string =>
  */
 export default (element, { nameAttr, icons, attrs }) => {
   const iconName = element.getAttribute(nameAttr);
-  const ComponentName = toPascalCase(iconName);
+  const ComponentName = `Lu${toPascalCase(iconName)}`;
 
   const iconNode = icons[ComponentName];
 
